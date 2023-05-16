@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Welcome</title>
+</head>
+<body>
+	<div >
+		<h1>Welcome to Hotel Rating Service</h1>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>UserId</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>About</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="users :${user}">
+					<td th:text="${users.userid}"></td>
+					<td th:text="${users.name}"></td>
+					<td th:text="${users.email}"></td>
+					<td th:text="${users.about}"></td>
+
+
+				</tr>
+
+			</tbody>
+
+
+
+
+		</table>
+
+
+	</div>
+</body>
+</html>
